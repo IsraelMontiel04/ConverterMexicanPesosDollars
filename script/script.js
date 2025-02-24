@@ -47,11 +47,22 @@ const addRowTable = (titulo, fecha, valor) => {
 
 consultarTipoCambio();
 
-const convertir = (pesos) => {
-    let valor = document.getElementById("valor").value
-    if (isNaN(valor) || valor === 0) {
-        document.getElementById("dolares").value = "Error";
+const convertir = () => {
+    let valor = parseFloat(document.getElementById("valor").value);
+    let cantidad = parseFloat(document.getElementById("cantidad").value);
+    let tipoCambio = document.getElementById("tipoCambio").value;
+
+    if (isNaN(valor) || valor === 0 || isNaN(cantidad)) {
+        document.getElementById("resultado").value = "Error";
+        return;
     }
-    let total = (pesos/valor).toFixed(2)
-    document.getElementById("dolares").value = total;
+
+    let total;
+    if (tipoCambio === "MXNtoUSD") {
+        total = (cantidad / valor).toFixed(2); // Pesos a dólares
+    } else {
+        total = (cantidad * valor).toFixed(2); // Dólares a pesos
+    }
+
+    document.getElementById("resultado").value = total;
 }

@@ -28,11 +28,18 @@
     <form action="#" method="post">
         <input type="hidden" name="valor" id="valor">
         
-        <label for="pesos">Pesos</label>
-        <input type="text" name="pesos" id="pesos" oninput="convertir(this.value)" placeholder="Ingrese cantidad">
+        <label for="cantidad">Cantidad</label>
+        <input type="text" name="cantidad" id="cantidad" oninput="convertir()" placeholder="Ingrese cantidad">
+    
+        <select id="tipoCambio" onchange="convertir()">
+            <option value="MXNtoUSD">Pesos a Dólares</option>
+            <option value="USDtoMXN">Dólares a Pesos</option>
+        </select>
+    
         =
-        <input type="text" name="dolares" id="dolares" readonly> Dolares
+        <input type="text" name="resultado" id="resultado" readonly>
     </form>
+    
     
     <script src="script/script.js"></script>
 </body>

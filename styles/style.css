@@ -13,6 +13,17 @@ h1, h4 {
     color: #007bff;
 }
 
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+
 /* Contenedor para centrar la tabla */
 .table-container {
     width: 100%;
