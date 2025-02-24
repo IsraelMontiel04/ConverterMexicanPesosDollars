@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Dolares - Pesos</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>Conversor Dolares - Pesos</h1>
+    <h4>Tipos de cambio Peso/Dólar</h4>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Fecha</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+    <form action="#" method="post">
+        <input type="hidden" name="valor" id="valor">
+        
+        <label for="pesos">Pesos</label>
+        <input type="text" name="pesos" id="pesos" oninput="convertir(this.value)" placeholder="Ingrese cantidad">
+        =
+        <input type="text" name="dolares" id="dolares" readonly> USD
+    </form>
+    
+    <script src="script/script.js"></script>
+</body>
+</html>
